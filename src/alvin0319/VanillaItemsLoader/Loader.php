@@ -35,6 +35,8 @@ final class Loader extends PluginBase{
 				$itemFactory->register($item);
 				$parser->register($name, static fn() => clone $item);
 				CustomItemManager::getInstance()->registerItem($item);
+				// TODO: register to CreativeInventory
+//				CreativeInventory::getInstance()->add(clone $item);
 				// TODO
 //				(function() use ($itemId, $entry) : void{
 //					/** @noinspection PhpUndefinedMethodInspection */
